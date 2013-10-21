@@ -31,6 +31,7 @@
     NSLog(@"book detail");
     self.title=@"Book Details";
     headers=@[@"Author",@"Publisher",@"Genre",@"Description",@"Status"];
+    
    // tabledatasource=[[NSMutableArray alloc] initWithObjects:@"Dave Mark & Jeff Lavarche",@"Apress(July21,2009)",@"computers",@"Features the best practices in the art and science of constructing software--topics include design, applying good techniques to construction, eliminating errors, planning, managing construction activities, and relating personal character to superior software. Original. (Intermediate)",@"Available", nil];
     
     pickersource=[[NSMutableArray alloc] initWithObjects:@"abc",@"kjnjk",@"uiweui",@"jknjk", nil];
@@ -77,10 +78,12 @@
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
     return 7;
 }
 
@@ -125,7 +128,7 @@
             customnumberofstars = [[DLStarRatingControl alloc] initWithFrame:CGRectMake(88,expsize.height + expsize2.height +20, 140, 41) andStars:5 isFractional:YES];
             customnumberofstars.delegate=self;
             customnumberofstars.backgroundColor=[UIColor clearColor];
-            customnumberofstars.rating=[[tabledatasource objectAtIndex:6] intValue];
+            customnumberofstars.rating=[[tabledatasource objectAtIndex:6] doubleValue];
             customnumberofstars.enabled=false;
             [cell.contentView addSubview:customnumberofstars];
             return cell;

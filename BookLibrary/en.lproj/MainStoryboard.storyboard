@@ -46,13 +46,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VW0-0Z-idt" firstAttribute="leading" secondItem="Ba1-7n-1sZ" secondAttribute="leading" constant="112" id="0bU-bj-HJo"/>
                             <constraint firstItem="VW0-0Z-idt" firstAttribute="top" secondItem="Ba1-7n-1sZ" secondAttribute="top" constant="74" id="13e-fd-Cez"/>
-                            <constraint firstItem="n6v-nG-RJy" firstAttribute="top" secondItem="Ba1-7n-1sZ" secondAttribute="top" constant="139" id="1Gu-jp-M4t"/>
                             <constraint firstItem="9uc-G1-Xs9" firstAttribute="top" secondItem="Ba1-7n-1sZ" secondAttribute="top" constant="78" id="4Y6-8e-tYD"/>
-                            <constraint firstItem="n6v-nG-RJy" firstAttribute="centerX" secondItem="Ba1-7n-1sZ" secondAttribute="centerX" type="default" id="BZq-K2-Sgb"/>
+                            <constraint firstItem="n6v-nG-RJy" firstAttribute="top" secondItem="Ba1-7n-1sZ" secondAttribute="top" constant="162" id="6IQ-Kk-grG"/>
                             <constraint firstItem="VW0-0Z-idt" firstAttribute="baseline" secondItem="9uc-G1-Xs9" secondAttribute="baseline" type="default" id="KhX-Po-FvR"/>
+                            <constraint firstItem="VW0-0Z-idt" firstAttribute="leading" secondItem="Ba1-7n-1sZ" secondAttribute="leading" constant="112" id="NNl-vT-sfH"/>
                             <constraint firstItem="9uc-G1-Xs9" firstAttribute="leading" secondItem="Ba1-7n-1sZ" secondAttribute="leading" constant="48" id="ST7-R3-DJA"/>
+                            <constraint firstItem="n6v-nG-RJy" firstAttribute="centerX" secondItem="Ba1-7n-1sZ" secondAttribute="centerX" type="default" id="pXf-DT-DsX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gfA-bW-XrT">
@@ -350,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="328"/>
+            <point key="canvasLocation" x="1141" y="318"/>
         </scene>
         <!--Booklist View Controller-->
         <scene sceneID="7ZU-ro-9Ms">
@@ -461,7 +461,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1446" y="334"/>
+            <point key="canvasLocation" x="1640" y="318"/>
         </scene>
         <!--Bookdetails View Controller-->
         <scene sceneID="hdS-nc-l8a">
@@ -615,7 +615,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6L-vT-qWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="328"/>
+            <point key="canvasLocation" x="2056" y="-170"/>
         </scene>
         <!--Lend View Controller-->
         <scene sceneID="zkQ-Xw-VcK">
@@ -646,6 +646,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjy-u5-BDS">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="omS-w6-eVa"/>
+                                    <constraint firstAttribute="height" constant="30" id="z6E-wD-qdu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -682,14 +683,15 @@
                             <constraint firstItem="u0c-go-KbS" firstAttribute="top" secondItem="aRa-Iq-zIv" secondAttribute="top" constant="99" id="Fhz-Em-OK4"/>
                             <constraint firstItem="SPR-ZQ-NYr" firstAttribute="top" secondItem="aRa-Iq-zIv" secondAttribute="top" constant="103" id="G0E-I2-hGS"/>
                             <constraint firstItem="pTj-hg-DTb" firstAttribute="leading" secondItem="aRa-Iq-zIv" secondAttribute="leading" constant="28" id="JGY-Re-Jtc"/>
-                            <constraint firstItem="zjy-u5-BDS" firstAttribute="top" secondItem="aRa-Iq-zIv" secondAttribute="top" constant="43" id="U9E-tb-ZBd"/>
                             <constraint firstItem="lUB-Io-Prp" firstAttribute="leading" secondItem="SPR-ZQ-NYr" secondAttribute="leading" type="default" id="UnY-gl-A0p"/>
                             <constraint firstItem="SPR-ZQ-NYr" firstAttribute="leading" secondItem="pTj-hg-DTb" secondAttribute="leading" type="default" id="bQ8-2N-cYp"/>
                             <constraint firstItem="pTj-hg-DTb" firstAttribute="baseline" secondItem="zjy-u5-BDS" secondAttribute="baseline" type="default" id="dNH-NM-nhW"/>
                             <constraint firstItem="u0c-go-KbS" firstAttribute="baseline" secondItem="SPR-ZQ-NYr" secondAttribute="baseline" type="default" id="fCm-fd-MSB"/>
                             <constraint firstItem="u0c-go-KbS" firstAttribute="leading" secondItem="zjy-u5-BDS" secondAttribute="leading" type="default" id="hnw-kk-mAG"/>
                             <constraint firstItem="LfS-11-qp0" firstAttribute="top" secondItem="aRa-Iq-zIv" secondAttribute="top" constant="152" id="iRu-03-M6C"/>
+                            <constraint firstItem="zjy-u5-BDS" firstAttribute="top" secondItem="aRa-Iq-zIv" secondAttribute="top" constant="42" id="ncW-Hv-04v"/>
                             <constraint firstItem="lUB-Io-Prp" firstAttribute="top" secondItem="aRa-Iq-zIv" secondAttribute="top" constant="156" id="t3l-4E-XHu"/>
+                            <constraint firstItem="pTj-hg-DTb" firstAttribute="top" secondItem="aRa-Iq-zIv" secondAttribute="top" constant="46" id="xva-qx-I0g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vh6-b9-wQy"/>
@@ -701,7 +703,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IX0-BI-Uca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2355" y="328"/>
+            <point key="canvasLocation" x="2665" y="-170"/>
         </scene>
         <!--Sidebar View Controller - Sidebar-->
         <scene sceneID="8EI-Ei-zax">
@@ -886,7 +888,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4c-d4-88L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="-5"/>
+            <point key="canvasLocation" x="17" y="-71"/>
         </scene>
     </scenes>
     <resources>
@@ -900,6 +902,9 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="NSMutableArray" superclassName="NSArray">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
+        </class>
         <class className="SWRevealViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SWRevealViewController.h"/>
         </class>
@@ -909,6 +914,9 @@
         <class className="bookdetailsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/bookdetailsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="doneButtonPressed:" candidateClass="UIDatePicker"/>
+                <relationship kind="action" name="takebook:"/>
                 <relationship kind="outlet" name="pickerview" candidateClass="UIPickerView"/>
             </relationships>
         </class>
@@ -923,6 +931,7 @@
         <class className="historyViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/historyViewController.h"/>
             <relationships>
+                <relationship kind="action" name="segcontrolclicked:"/>
                 <relationship kind="action" name="sendMail:"/>
                 <relationship kind="outlet" name="remind" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="seg" candidateClass="UISegmentedControl"/>

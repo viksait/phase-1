@@ -97,6 +97,13 @@ shouldReloadTableForSearchScope:(NSInteger)searchOption
     return [tabledatasource count];
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [UIView new];
+    
+    
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"tablecell";
@@ -104,31 +111,34 @@ shouldReloadTableForSearchScope:(NSInteger)searchOption
     tablecell *cell = [tableView
                        dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (cell == nil)
-    {
-        cell = [[tablecell alloc]
-                initWithStyle:UITableViewCellStyleDefault
-                reuseIdentifier:CellIdentifier];
-    }
-    if ([tableView isEqual:self.searchDisplayController.searchResultsTableView]) {
-        
-    }
-    else
-    {            
-        
-          NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-          cell.imgview.image=[UIImage imageWithData:[defaults objectForKey:[[self.tabledatasource objectAtIndex:indexPath.row] objectForKey:@"isbn" ]]];
-          cell.nameLabel.text=[[self.tabledatasource objectAtIndex:indexPath.row] objectForKey:@"title"] ;
-          cell.idLabel.text=  [[self.tabledatasource objectAtIndex:indexPath.row] objectForKey:@"author"];//assigning author name
-          customnumberofstars = [[DLStarRatingControl alloc] initWithFrame:CGRectMake(70,55,140, 41) andStars:5 isFractional:YES];
-          customnumberofstars.delegate=self;
-          customnumberofstars.backgroundColor=[UIColor clearColor];
-          customnumberofstars.rating=[[[self.tabledatasource objectAtIndex:indexPath.row] objectForKey:@"rating" ] doubleValue] ;
-          customnumberofstars.enabled=false;
-          [cell.contentView addSubview:customnumberofstars];
-        
-    }
-    return cell;
+        if (cell == nil)
+        {
+            cell = [[tablecell alloc]
+                    initWithStyle:UITableViewCellStyleDefault
+                    reuseIdentifier:CellIdentifier];
+            self.tableview.separatorColor = [UIColor whiteColor];
+        }
+        if ([tableView isEqual:self.searchDisplayController.searchResultsTableView]) {
+            
+        }
+        else
+        {
+            
+            NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+            cell.imgview.image=[UIImage imageWithData:[defaults objectForKey:[[self.tabledatasource objectAtIndex:indexPath.row] objectForKey:@"isbn" ]]];
+            cell.nameLabel.text=[[self.tabledatasource objectAtIndex:indexPath.row] objectForKey:@"title"] ;
+            cell.idLabel.text=  [[self.tabledatasource objectAtIndex:indexPath.row] objectForKey:@"author"];//assigning author name
+            customnumberofstars = [[DLStarRatingControl alloc] initWithFrame:CGRectMake(70,55,140, 41) andStars:5 isFractional:YES];
+            customnumberofstars.delegate=self;
+            customnumberofstars.backgroundColor=[UIColor clearColor];
+            customnumberofstars.rating=[[[self.tabledatasource objectAtIndex:indexPath.row] objectForKey:@"rating" ] doubleValue] ;
+            customnumberofstars.enabled=false;
+            [cell.contentView addSubview:customnumberofstars];
+            
+        }
+
+    
+        return cell;
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
